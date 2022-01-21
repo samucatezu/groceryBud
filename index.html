@@ -1,49 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-     <meta charset="UTF-8" />
-     <meta name="viewport" content="width3Ddevice-width,
-    initial-scale=1.0" />
-    <title>Grocery Bud</title
-    <!-- font awesome -->
-    <link
-      rel="stylesheet"
-      href="./fontawesome-free-5.12.0-web/css/all.min.css"
-    />
-    <!-- styles -->
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <section class="section-center">
-      <!-- form -->
-      <form class="grocery-form">
-        <p class="alert"></p>
-        <h3>grocery bud</h3>
-        <div class="form-control">
-          <input type="text" id="grocery" placeholder="e.g. eggs" />
-          <button type="submit" class="submit-btn"> submit </button>
-        </div>
-      <!-- list -->
-      <div class="grocery-container">
-        <div class="grocery-list">
-          <article class="grocery-item">
-            <p class="title">item</p>
-            <div class="btn-container">
-              <button type="button" class="edit-btn">
-               <i class="fas fa-edit"></i>
-              </button>
-              <button type%="button" class="delete-btn">
-               <i class=" fas fa-trash"></i>
-              </button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Grocery Bud</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Grocery Bud</h1>
+        <form action="" class="grocery-form">
+            <div class="input-box">
+                <input type="text" class="input-text" id="grocery" placeholder="e.g. eggs" required>
+                <button type="submit" class="submit-btn">Submit</button>
             </div>
-          </article>
-        </div>
-        <!-- button -->
-        <button type="button" class="clear-btn">clear items></button>
-    </section>
-    <h1>grocery bud project</h1>
-    <!-- javascript -->
-    <script src="app.js"></script>
-  </body>
+            <div class="grocery-container">
+                <div class="msg-container">
+                    <!-- MESSAGES GO HERE -->
+                </div>
+                <div class="grocery-list">
+                    <!-- ITEMS GO HERE -->
+                </div>
+                <button type="button" class="clear-btn">clear items</button>
+            </div>
+        </form>
+    </div>
+    <script src="./main.js"></script>
+</body>
 </html>
-
