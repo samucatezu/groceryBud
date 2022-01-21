@@ -29,7 +29,7 @@ submitBtn.addEventListener('click', function(e){
                 if(inputText.value === item){
                         // USER ERROR MSG
                         let type = "error-msg"; 
-                        let string = "Can't enter same item twice !";
+                        let string = "Nao coloque o mesmo item novamente!";
                         msgToUser(type,string);
                     check = false;
                 };
@@ -37,7 +37,7 @@ submitBtn.addEventListener('click', function(e){
         };
         if(check === true){
             // SUBMIT
-            if(submitBtn.innerText === "Submit"){
+            if(submitBtn.innerText === "Adicionar"){
                 // Create new item
                 let title = inputText.value;
                 addItem(title);
@@ -45,10 +45,10 @@ submitBtn.addEventListener('click', function(e){
             }
             // EDIT
             else if(submitBtn.innerText === "Edit"){
-                submitBtn.innerText = "Submit";
+                submitBtn.innerText = "Adicionar";
                 let newInput = inputText.value;
                 inputText.value = "";
-                inputText.placeholder = "e.g. eggs"
+                inputText.placeholder = "Coloque um item"
 
                 const groceryItem = document.querySelectorAll('.grocery-item');
                 groceryItem.forEach((item) => {
@@ -60,7 +60,7 @@ submitBtn.addEventListener('click', function(e){
                         pItem.innerText = newInput;
                         // USER EDIT MSG
                         let type = "edit-msg"; 
-                        let string = "Successful Edit !";
+                        let string = "Editado com sucesso !";
                         msgToUser(type,string);
                     } 
                 });
@@ -108,7 +108,7 @@ function deleteEdit(e){
     else if(btn.classList[0] === "edit-btn"){
         submitBtn.innerText = "Edit";
         inputText.value = "";
-        inputText.placeholder = `Modify your item : ${pItem.innerText}`;
+        inputText.placeholder = `Edite seu item : ${pItem.innerText}`;
         pItem.classList.add("edit-text");
     }
 }

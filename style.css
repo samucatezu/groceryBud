@@ -4,20 +4,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 :root {
     --clr-bgc : #EAE7DC;
-    --clr-primary : #E85A4F;
-    --clr-secondary : #E98074;
+    --clr-primary : #000;
+    --clr-secondary : #fff;
 
-    --clr-accent : #8E8D8A;
-    --clr-bg-btn : #D8C3A5;
+    --clr-accent : #fff;
+    --clr-bg-btn : #000;
 }
 
 body {
     font-size: 62.5%;
     background-color: var(--clr-bgc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #000;
+    padding: 0;
+    margin: 5px;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif ;
 }
 
 .container {
@@ -26,13 +36,14 @@ body {
     left: 50%;
     transform: translate(-50%, 0);
     margin-top: 3rem;
+    
 }
 
 .heading {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 2rem;
-    color: var(--clr-primary);
+    color: #fff;
 }
 
 form {
@@ -43,6 +54,15 @@ form {
     width: 30rem;
 }
 
+.input-box{
+  display: flex;
+  gap: 1vh;
+  border-bottom: 2px solid white ;
+  
+}
+
+
+
 .input-box .input-text,
 .input-box .submit-btn{
     border: none;
@@ -52,6 +72,8 @@ form {
     font-size: 1.6rem;
     color: var(--clr-secondary);
     background-color: var(--clr-bg-btn);
+    font-family: 'IBM Plex Sans', sans-serif ;
+    
 }
 
 .input-box .submit-btn{
@@ -100,13 +122,15 @@ form {
     background-color: var(--clr-bg-btn);
 }
 
+
 .grocery-item .btn-container .delete-btn{
-    color: red;
+    color: white;
     cursor: pointer;
 }
 .grocery-item .btn-container .edit-btn{
-    color: green;
+    color: white;
     cursor: pointer;
+    
 }
 .edit-text {
     color: var(--clr-primary) !important;
@@ -116,13 +140,15 @@ form {
 
 .clear-btn {
     font-size: 1rem;
-    border: none;
+    border: white solid rgba();
     border-radius: 1rem;
     padding: .3rem;
     margin: 1rem auto;
     color: var(--clr-bgc);
-    background-color:var(--clr-primary);
+    background-color:var(--clr-bg-btn);
     cursor: pointer;
+    font-family: 'IBM Plex Sans', sans-serif !important ;
+  
 }
 
 /* EDIT/ERROR MSG */
@@ -172,4 +198,20 @@ form {
     100%{
         transform: scale(1);
     }
+}
+
+@media only screen and (max-width: 600px) {
+  body{
+    height: 100px;
+    max-width: 100px;
+  }
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 3rem;
+}
+
 }
