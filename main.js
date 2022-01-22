@@ -18,7 +18,7 @@ submitBtn.addEventListener('click', function(e){
     if(inputText.value === ""){
         // USER ERROR MSG
         let type = "error-msg"; 
-        let string = "Enter something !";
+        let string = "Escreva algo !";
         msgToUser(type,string);
     } else {
 
